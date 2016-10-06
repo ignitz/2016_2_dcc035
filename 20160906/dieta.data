@@ -1,0 +1,15 @@
+set Foods     := apples, breads, candies;
+set Nutrients := vitamin_a, vitamin_b, vitamin_c;
+param cost    :=
+      apples  2
+      breads  1
+      candies 0.2;
+      param amount:   apples breads candies :=
+            vitamin_a 5      2      3
+            vitamin_b 5      10     0
+            vitamin_c 10     1      0;
+       param minimum   :=
+             vitamin_a 30
+             vitamin_b 50
+             vitamin_c 30;
+end;

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>README</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    jax: ["input/TeX","output/HTML-CSS"],
+    extensions: [],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"]
+    },
+    showMathMenu: false
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js">
+</script>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(56, 58, 66); overflow: auto; background-color: rgb(250, 250, 250); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(94, 97, 110); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 111, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(94, 97, 110); border-color: rgb(209, 209, 210); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(209, 209, 210); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(209, 209, 210); }
+.markdown-preview:not([data-use-github-style]) pre, .markdown-preview:not([data-use-github-style]) code { color: rgb(0, 0, 0); background-color: rgb(234, 234, 235); }
+.markdown-preview:not([data-use-github-style]) pre, .markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(240, 240, 240); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(0, 0, 0); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(209, 209, 210) rgb(209, 209, 210) rgb(193, 193, 194); background-color: rgb(234, 234, 235); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] pre, .markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre, .markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.markdown-preview del { text-decoration: none; position: relative; }
+.markdown-preview del::after { border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: black; content: ""; left: 0px; position: absolute; right: 0px; top: 50%; }
+.markdown-preview .flash { animation: flash 1s ease-out 1; outline: rgba(255, 0, 0, 0) solid 1px; }
+.markdown-preview .flash:not(li) { display: block; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+
+pre.editor-colors,
+.host {
+  background-color: #fafafa;
+  color: #383a42;
+}
+pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background-color: rgba(56, 58, 66, 0.05);
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #383a42;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-left: 2px solid #526fff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #e5e5e6;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-bottom: 1px solid #526fff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .find-result .region.region.region,
+.host .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region,
+.host .current-result .region.region.region {
+  border-radius: 0px;
+  background-color: rgba(82, 111, 255, 0.2);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region,
+.host .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region,
+.host .current-result .region.region.region {
+  border: 2px solid #526fff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  color: #9d9d9f;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  color: #383a42;
+  background-color: #f2f2f2;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right,
+.host .gutter .line-number .icon-right {
+  color: #383a42;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(255, 20, 20, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #383a42;
+}
+.comment {
+  color: #a0a1a7;
+  font-style: italic;
+}
+.comment .markup.link {
+  color: #a0a1a7;
+}
+.entity.name.type {
+  color: #c18401;
+}
+.entity.other.inherited-class {
+  color: #50a14f;
+}
+.keyword {
+  color: #a626a4;
+}
+.keyword.control {
+  color: #a626a4;
+}
+.keyword.operator {
+  color: #383a42;
+}
+.keyword.other.special-method {
+  color: #4078f2;
+}
+.keyword.other.unit {
+  color: #986801;
+}
+.storage {
+  color: #a626a4;
+}
+.storage.type.annotation,
+.storage.type.primitive {
+  color: #a626a4;
+}
+.storage.modifier.package,
+.storage.modifier.import {
+  color: #383a42;
+}
+.constant {
+  color: #986801;
+}
+.constant.variable {
+  color: #986801;
+}
+.constant.character.escape {
+  color: #0184bc;
+}
+.constant.numeric {
+  color: #986801;
+}
+.constant.other.color {
+  color: #0184bc;
+}
+.constant.other.symbol {
+  color: #0184bc;
+}
+.variable {
+  color: #e45649;
+}
+.variable.interpolation {
+  color: #ca1243;
+}
+.variable.parameter {
+  color: #383a42;
+}
+.string {
+  color: #50a14f;
+}
+.string.regexp {
+  color: #0184bc;
+}
+.string.regexp .source.ruby.embedded {
+  color: #c18401;
+}
+.string.other.link {
+  color: #e45649;
+}
+.punctuation.definition.comment {
+  color: #a0a1a7;
+}
+.punctuation.definition.method-parameters,
+.punctuation.definition.function-parameters,
+.punctuation.definition.parameters,
+.punctuation.definition.separator,
+.punctuation.definition.seperator,
+.punctuation.definition.array {
+  color: #383a42;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #4078f2;
+}
+.punctuation.definition.bold {
+  color: #c18401;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #ca1243;
+}
+.punctuation.section.method,
+.punctuation.section.class,
+.punctuation.section.inner-class {
+  color: #383a42;
+}
+.support.class {
+  color: #c18401;
+}
+.support.type {
+  color: #0184bc;
+}
+.support.function {
+  color: #0184bc;
+}
+.support.function.any-method {
+  color: #4078f2;
+}
+.entity.name.function {
+  color: #4078f2;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #c18401;
+}
+.entity.name.section {
+  color: #4078f2;
+}
+.entity.name.tag {
+  color: #e45649;
+}
+.entity.other.attribute-name {
+  color: #986801;
+}
+.entity.other.attribute-name.id {
+  color: #4078f2;
+}
+.meta.class {
+  color: #c18401;
+}
+.meta.class.body {
+  color: #383a42;
+}
+.meta.method-call,
+.meta.method {
+  color: #383a42;
+}
+.meta.definition.variable {
+  color: #e45649;
+}
+.meta.link {
+  color: #986801;
+}
+.meta.require {
+  color: #4078f2;
+}
+.meta.selector {
+  color: #a626a4;
+}
+.meta.separator {
+  background-color: #373b41;
+  color: #383a42;
+}
+.meta.tag {
+  color: #383a42;
+}
+.underline {
+  text-decoration: underline;
+}
+.none {
+  color: #383a42;
+}
+.invalid.deprecated {
+  color: #000000 !important;
+  background-color: #f2a60d !important;
+}
+.invalid.illegal {
+  color: #ffffff !important;
+  background-color: #ff1414 !important;
+}
+.markup.bold {
+  color: #986801;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #a626a4;
+}
+.markup.deleted {
+  color: #e45649;
+}
+.markup.italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.markup.heading {
+  color: #e45649;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #4078f2;
+}
+.markup.link {
+  color: #a626a4;
+}
+.markup.inserted {
+  color: #50a14f;
+}
+.markup.quote {
+  color: #986801;
+}
+.markup.raw {
+  color: #50a14f;
+}
+.source.cs .keyword.operator {
+  color: #a626a4;
+}
+.source.css .property-name,
+.source.css .property-value {
+  color: #696c77;
+}
+.source.css .property-name.support,
+.source.css .property-value.support {
+  color: #383a42;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .link .entity {
+  color: #4078f2;
+}
+.source.go .storage.type.string {
+  color: #a626a4;
+}
+.source.ini .keyword.other.definition.ini {
+  color: #e45649;
+}
+.source.java .storage.modifier.import {
+  color: #c18401;
+}
+.source.java .storage.type {
+  color: #c18401;
+}
+.source.java .keyword.operator.instanceof {
+  color: #a626a4;
+}
+.source.java-properties .meta.key-pair {
+  color: #e45649;
+}
+.source.java-properties .meta.key-pair > .punctuation {
+  color: #383a42;
+}
+.source.js .keyword.operator {
+  color: #0184bc;
+}
+.source.js .keyword.operator.delete,
+.source.js .keyword.operator.in,
+.source.js .keyword.operator.of,
+.source.js .keyword.operator.instanceof,
+.source.js .keyword.operator.new,
+.source.js .keyword.operator.typeof,
+.source.js .keyword.operator.void {
+  color: #a626a4;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #e45649;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #e45649;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #50a14f;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #0184bc;
+}
+.source.ruby .constant.other.symbol > .punctuation {
+  color: inherit;
+}
+.source.python .keyword.operator.logical.python {
+  color: #a626a4;
+}
+.source.python .variable.parameter {
+  color: #986801;
+}
+</style>
+  </head>
+  <body class='markdown-preview'><h1>Pesquisa Operacional (Prova 1)</h1>
+<h2>Yuri 23/03/2016</h2>
+<h3>Método Simplex</h3>
+<blockquote>
+<p>Hoje estudando desesperadamente pra primeira prova utilizando esta nota.</p>
+</blockquote>
+<p>Hoje vamos formalizar o método Simplex:</p>
+<p>Vamos escrever um PPL de uma forma matricial:</p>
+<span class="math"><script type="math/tex; mode=display"> \max c^Tx\\
+ Ax = b\\
+ x \ge 0
+</script></span>
+<ul>
+<li><span class="math"><script type="math/tex">c^T</script></span> é o vetor de coeficientes ou custos Transposto.</li>
+<li><span class="math"><script type="math/tex">x</script></span> são todas as nossas variáveis <span class="math"><script type="math/tex">x_1, x_2, ..., x_n</script></span>.</li>
+<li><span class="math"><script type="math/tex">A</script></span> é a nossa matriz tecnológica da qual falei antes.</li>
+<li><span class="math"><script type="math/tex">b</script></span> são os valores das nossas restrições de igualdade.</li>
+</ul>
+<hr>
+<p>Vimos que o conjunto das variáveis básicas “<span class="math"><script type="math/tex">B</script></span>” e não básicas “<span class="math"><script type="math/tex">N</script></span>”</p>
+<p>Chamaremos a partir de hoje: <span class="math"><script type="math/tex">B</script></span> de <span class="math"><script type="math/tex">x_b</script></span> e <span class="math"><script type="math/tex">N</script></span> de <span class="math"><script type="math/tex">x_n</script></span>.</p>
+<p>Ou seja <span class="math"><script type="math/tex">x_b</script></span> é o conjunto de variáveis “<span class="math"><script type="math/tex">x</script></span>” que são básicas.
+<span class="math"><script type="math/tex">x_n</script></span> é o conjunto de variáveis “<span class="math"><script type="math/tex">x</script></span>” que são não-básicas.</p>
+<p>Motivo da troca: Utilizaremos <span class="math"><script type="math/tex">B</script></span> e <span class="math"><script type="math/tex">N</script></span> para outro significado:</p>
+<hr>
+<p>Nossas variáveis <span class="math"><script type="math/tex">A</script></span>, <span class="math"><script type="math/tex">x</script></span> e <span class="math"><script type="math/tex">c</script></span> possuem celulas ou colunas que podemos dizer que pertence a parte básica ou não básica do nosso problema.</p>
+<p><span class="math"><script type="math/tex">A = [B|N]</script></span></p>
+<p><span class="math"><script type="math/tex">B</script></span> são as colunas com os coeficientes de <span class="math"><script type="math/tex">x_1</script></span>, <span class="math"><script type="math/tex">x_2</script></span> e <span class="math"><script type="math/tex">x_4</script></span> que seriam as básicas.</p>
+<p><span class="math"><script type="math/tex">N</script></span> são as colunas com os coeficientes de <span class="math"><script type="math/tex">x_3</script></span> e <span class="math"><script type="math/tex">x_5</script></span> que seriam as não-básicas.</p>
+<p><span class="math"><script type="math/tex">\begin{array}{l}
+x = \left[ {\begin{array}{*{20}{c}}
+{{x_b}}\\
+{{x_n}}
+\end{array}} \right]\\
+c = \left[ {\begin{array}{*{20}{c}}
+{{c_b}}\\
+{{c_n}}
+\end{array}} \right]
+\end{array}</script></span></p>
+<p>A divisão de “<span class="math"><script type="math/tex">x</script></span>” entre básicas e não básicas fica fácil de ver.<br>
+E os coeficientes que multiplicam as variáveis básicas são “<span class="math"><script type="math/tex">c_b</script></span>” e os demais “<span class="math"><script type="math/tex">c_n</script></span>”</p>
+<p>Podemos então re-escrever o problema em termo dessas novas variáveis.<br>
+Mas eu não acho isso absolutamente nada didatico (eu pessoalmente fico super perdido)<br>
+Então vou pular essa parte.</p>
+<span class="math"><script type="math/tex; mode=display"> \max c_b^T x_b + c_n^Tx_n\\
+ B x_b + N x_n = b\\
+ x_b, x_n \ge 0
+</script></span>
+<p>Podemos ainda escrever de forma mais especifica:</p>
+<span class="math"><script type="math/tex; mode=display"> \max c_b^T x_b + c_n^T x_n\\
+ B x_b + N x_n = b\\
+ x_b \ge 0, x_n = 0
+</script></span>
+<p>Pois sabemos que as variáveis <span class="math"><script type="math/tex">x_n</script></span> são sempre zeradas.</p>
+<hr>
+<p>Agora vamos falar das formalidades do simplex.</p>
+<p>Dado um problema na forma padrão do tipo:</p>
+<span class="math"><script type="math/tex; mode=display"> \max 3 x_1 + 5 x_2\\
+\\
+ 1 x_1 + 0 x_2 + x_3 = 4\\
+ 0 x_1 + 2 x_2 + x_4 = 12\\
+ 3 x_1 + 2 x_2 + x_5 = 18\\
+\\
+ x_1,x_2,x_3,x_4,x_5 \ge 0
+</script></span>
+<p>O primeiro passo é re-escrever as restrições de forma a isolar as variáveis básicas.</p>
+<p>Inicialmente <span class="math"><script type="math/tex">x_b = {x_1,x_2,x_4}</script></span> e <span class="math"><script type="math/tex">x_n = {x_3, x_5}</script></span>.</p>
+<p>Assim temos:</p>
+<span class="math"><script type="math/tex; mode=display"> x_1 = 4  -  1  x_3\\
+ x_4 = 12 -  2  x_2\\
+ x_2 = 9  - \frac{3}{2}x_1 - \frac{1}{2} x_5
+</script></span>
+<p>Agora tem um problema.
+Ainda temos variáveis básicas do lado direito certo?
+Como faremos para realmente isola-las?
+Substituindo:</p>
+<p><span class="math"><script type="math/tex">x_1</script></span> na eq 3:</p>
+<span class="math"><script type="math/tex; mode=display"> x_2 = 9 - \frac{1}{2} x_5 - \frac{3}{2} (4 - 1 x_3)\\
+ x_2 = 9 - \frac{1}{2} x_5 -  6 + \frac{3}{2} x_3\\
+ x_2 = 3 - \frac{1}{2} x_5 + \frac{3}{2} x_3
+</script></span>
+<p><span class="math"><script type="math/tex">x_2</script></span> na eq 2:</p>
+<span class="math"><script type="math/tex; mode=display"> x_4 = 12 - 2 (3 - \frac{1}{2} x_5 + \frac{3}{2} x_3)\\
+ x_4 = 12 - 6 + 1 x_5 - 3 x_3\\
+ x_4 = 6 + x_5 - 3 x_3
+</script></span>
+<p>Re-escrevendo agora:</p>
+<span class="math"><script type="math/tex; mode=display"> x_1 = 4 - x_3\\
+ x_2 = 3 - \frac{1}{2} x_5 + \frac{3}{2} x_3\\
+ x_4 = 6 + x_5 - 3 x_3
+</script></span>
+<p>Pronto passo concluído.
+Pensando matricialmente, nós operamos sobre a equação:</p>
+<span class="math"><script type="math/tex; mode=display">B x_b + N x_n = b
+</script></span>
+<p>Para ela ficar na forma em que <span class="math"><script type="math/tex">x_b</script></span> está isolado ou seja:</p>
+<span class="math"><script type="math/tex; mode=display"> B x_b = b - N x_n\\
+ B^{-1} B x_b = B^{-1} b - B^{-1} N x_n\\
+ x_b =  B^{-1} b - B^{-1} N x_n
+</script></span>
+<p>Ops, isso quer dizer que nos cálculos que fizemos acima nos sem perceber calculamos uma inversa de uma matriz O.O</p>
+<p>Se pensar bem, nós fizemos isso mesmo.<br>
+Ao isolar as 3 variáveis nós dividimos as linhas pelo coeficiente daquela variável.</p>
+<p>Ou seja, a linha de x1 (restrição 1) foi dividia pelo coeficiente de x1 que era 1.<br>
+Ao substituir as variáveis isoladas nas demais linhas, fizemos o equivalente a soma de linhas<br>
+com o objetivo de zerar a coluna de x1, exceto pela ocorrência de x1 na linha 1.<br>
+Em outras palavras é como resolver um sistema linear.</p>
+<hr>
+<p>Passo 1.1:</p>
+<p>Agora que já temos os valores isolados de cada variável básica vamos raciocinar sobre porque esse formato é legal?</p>
+<p><span class="math"><script type="math/tex">x_1 = 4 - x_3</script></span>                 (antiga restrição vertical   no plano cartesiano)<br>
+<span class="math"><script type="math/tex">x_4 = 6 + x_5 - 3 x_3</script></span>          (antiga restrição horizontal no plano cartesiano)<br>
+<span class="math"><script type="math/tex">x_2 = 3 - \frac{1}{2} x_5 + \frac{3}{2} x_3</script></span>    (antiga restrição diagonal   no plano cartesiano)</p>
+<p><span class="math"><script type="math/tex">x_b = {x_1,x_2,x_4}\\
+x_n = {x_3,x_5}</script></span></p>
+<blockquote>
+<p>A partir de agora vai ficar dificil mapear as restrições para as linhas do grafo.<br>
+Porém o sistema ainda é equivalente.</p>
+</blockquote>
+<p>Veja bem, <span class="math"><script type="math/tex">x_5</script></span> e <span class="math"><script type="math/tex">x_3</script></span> tem valor <span class="math"><script type="math/tex">0</script></span>, pois são variáveis não básicas.</p>
+<p>Logo<br>
+<span class="math"><script type="math/tex">x_1 = 4\\
+ x_2 = 3\\
+ x_4 = 6</script></span></p>
+<p>Com isso fica fácil saber o ponto em que estamos no plano cartesiano:</p>
+<p><span class="math"><script type="math/tex">x_1 = 4, x_2 = 3</script></span></p>
+<p>E o segundo ponto importante é que agora, nós conseguimos identificar os vértices que são adjacentes ao atual.</p>
+<p>Lembram-se do que fizemos nas aulas passadas de seguir com o olho as arestas mais próximas até encontrarmos
+o próximo vértice para o qual poderíamos caminhar?</p>
+<p>Vou exemplificar:</p>
+<p>Quais o vértices adjacentes à <span class="math"><script type="math/tex">(4,3)</script></span> no problema acima?</p>
+<p>Para descobrir isso vou trocar <span class="math"><script type="math/tex">x_5</script></span> uma não básica, com uma das <span class="math"><script type="math/tex">3</script></span> básicas.</p>
+<p>Isso significa que <span class="math"><script type="math/tex">x_5</script></span> vai passar a ter valor não nulo e que uma das variáveis <span class="math"><script type="math/tex">x_1</script></span>, <span class="math"><script type="math/tex">x_2</script></span> ou <span class="math"><script type="math/tex">x_4</script></span> terá agora valor nulo.</p>
+<p>Vamos supor essa troca com a variável <span class="math"><script type="math/tex">x_4</script></span>.</p>
+<p>Se colocar <span class="math"><script type="math/tex">x_4 = 0</script></span>, a restrição da variável <span class="math"><script type="math/tex">x_4</script></span>:</p>
+<p>(1) <span class="math"><script type="math/tex">x_4 = 6 + x_5 - 3 x_3</script></span></p>
+<p>Vai ficar:</p>
+<p>(2) <span class="math"><script type="math/tex">x_5 = -6 + x_4 + 3 x_3</script></span></p>
+<p>Agora vejam o problema, se <span class="math"><script type="math/tex">x_4</script></span> e <span class="math"><script type="math/tex">x_3</script></span> são iguais à <span class="math"><script type="math/tex">0</script></span>.<br>
+<span class="math"><script type="math/tex">x_5</script></span> fica menor que <span class="math"><script type="math/tex">0</script></span>. Logo essa troca é inviável.<br>
+(mas ainda é uma sol. básica, ou seja um vertice de duas restrições).</p>
+<p>Isso também vale para qualquer restrição escrita na forma <strong>(1)</strong>
+onde o coeficiente da variável não-básica for positivo.</p>
+<p>Porém isso só impossibilita a troca de <span class="math"><script type="math/tex">x_5</script></span> com <span class="math"><script type="math/tex">x_4</script></span>, ainda resta uma restrição
+cuja variável <span class="math"><script type="math/tex">x_5</script></span> não está positiva:</p>
+<p><span class="math"><script type="math/tex">x_2 = 3 - \frac{1}{2} x_5 + \frac{3}{2} x_3</script></span></p>
+<p>Essa troca não deixará nenhuma variável com valor negativo.</p>
+<p><span class="math"><script type="math/tex">x_5 = \frac{3}{2} - \frac{1}{2} x_2  + \frac{3}{4} x_3</script></span></p>
+<p>Agora substituindo <span class="math"><script type="math/tex">x_5</script></span> na restrição 2:</p>
+<p><span class="math"><script type="math/tex">x_4 = 6 + (\frac{3}{2} - \frac{1}{2} x_2  + \frac{3}{4} x_3) - 3 x_3</script></span></p>
+<p>fica:</p>
+<p><span class="math"><script type="math/tex">x_4 = \frac{15}{2} - \frac{1}{2} x_2 - \frac{9}{4} x_3</script></span></p>
+<p>Fazendo com que agora nosso problema seja:</p>
+<p><span class="math"><script type="math/tex">x_1 = 4 - x_3\\
+ x_4 = \frac{15}{2} - \frac{1}{2} x_2 - \frac{9}{4} x_3\\
+ x_5 = \frac{3}{2} - \frac{1}{2} x_2  + \frac{3}{4} x_3\\
+\\
+ x_b = {x_1,x_4,x_5}\\
+ x_n = {x_3,x_2}</script></span></p>
+<p>E <span class="math"><script type="math/tex">x_5</script></span> terá o valor de 3 meios.
+Ou seja encontramos um vértice adjacente que também é válido.<br>
+Não expliquei ainda se esse vértice é mais próximo ou menos próximo
+do nosso objetivo “<span class="math"><script type="math/tex">\max 3 x_1 + 5 x_2</script></span>”, mas já aprendemos como caminhar pelo método simplex.</p>
+<p>Percebam que nós geramos um tanto de possibilidades de troca não é verdade?
+Podemos trocar qualquer uma das não-básicas com qualquer uma das básicas,
+apesar de a maioria das trocas tornarem o problema inviável.
+Como eu posso ter tanta certeza de que eu consegui justamente um vértice adjacente?</p>
+<blockquote>
+<p>Nota sobre o paragrafo acima:<br>
+Não se pode trocar uma não básica por uma básica,<br>
+se o coeficiente da não básica for 0 na linha associada a variável básica.</p>
+</blockquote>
+<p>A certeza vem do fato de que toda solução básica representa a intercessão de duas (ou mais) restrições.<br>
+Lembrando que cada restrição é uma linha, toda solução básica é um vertice.<br>
+Quando se realiza uma troca, voce caminha sobre uma das linhas/restrições até encontrar o próximo vertice.<br>
+(no caso saímos do ponto <span class="math"><script type="math/tex">(4,3)</script></span> e chegamos no ponto <span class="math"><script type="math/tex">(4,0)</script></span>)</p>
+<p>E como eu sei que esse vértice está dentro do campo de soluções?</p>
+<p>Ele não está infringindo nenhuma das restrições correto? Isso basta.
+Quando fazemos uma troca e ela infringe uma das restrições significa que encontramos
+um vértice que não satisfaz todas as restrições apesar de que satisfaz ao menos duas delas.</p>
+<hr>
+<p>Certo agora como avaliar qual troca fazer para otimizar nosso objetivo?</p>
+<p>Não é nada dificil, vamos escrever todo o nosso problema de novo:</p>
+<p><span class="math"><script type="math/tex">\max 3 x_1 + 5 x_2</script></span></p>
+<p><span class="math"><script type="math/tex">x_1 = 4 - x_3</script></span>                 (antiga restrição vertical   no plano cartesiano)<br>
+<span class="math"><script type="math/tex">x_4 = 6 + x_5 - 3 x_3</script></span>          (antiga restrição horizontal no plano cartesiano)<br>
+<span class="math"><script type="math/tex">x_2 = 3 - \frac{1}{2} x_5 + \frac{3}{2} x_3</script></span>    (antiga restrição diagonal   no plano cartesiano)</p>
+<p><span class="math"><script type="math/tex">x_1,x_2,x_4 \ge 0</script></span><br>
+<span class="math"><script type="math/tex">x_3,x_5     = 0</script></span></p>
+<p>Agora nós temos de fazer uma coisa adicional para o problema ficar
+totalmente no modo usado pelo simplex.</p>
+<p>Precisamos substituir os valores de <span class="math"><script type="math/tex">x_1</script></span> e de <span class="math"><script type="math/tex">x_2</script></span> no objetivo:</p>
+<p><span class="math"><script type="math/tex">\max 3 (4 - x_3) + 5 (3 - \frac{1}{2} x_5 + \frac{3}{2} x_3)</script></span></p>
+<p><span class="math"><script type="math/tex">\max 12 - x_3 + 15 - \frac{1}{2} x_5 + \frac{3}{2} x_3</script></span></p>
+<p><span class="math"><script type="math/tex">\max 27 - \frac{1}{2} x_5 + \frac{1}{2} x_3</script></span></p>
+<p>Ou seja nosso problema fica:</p>
+<p><span class="math"><script type="math/tex">\max 27 - \frac{1}{2} x_5 + \frac{1}{2} x_3\\
+ x_1 = 4 - x_3\\
+ x_4 = 6 + x_5 - 3 x_3\\
+ x_2 = 3 - \frac{1}{2} x_5 + \frac{3}{2} x_3\\
+\\
+ x_1,x_2,x_4 \ge 0\\
+ x_3,x_5     = 0</script></span></p>
+<blockquote>
+<p>Notem: já que <span class="math"><script type="math/tex">x_3</script></span> e <span class="math"><script type="math/tex">x_5 = 0</script></span>, <span class="math"><script type="math/tex">27</script></span> é o valor do objetivo no vértice atual.</p>
+</blockquote>
+<p>Agora lembram-se do nosso vetor gradiente que indicava qual a nossa direção?<br>
+E lembram-se de que quando eu escolhi <span class="math"><script type="math/tex">x_5</script></span> para virar básica o valor de <span class="math"><script type="math/tex">x_5</script></span>
+cresceu de <span class="math"><script type="math/tex">0</script></span> para um valor não nulo?</p>
+<p>Isso significa que para avaliar o que acontecerá basta olhar para os coeficientes
+do objetivo ou seja para o nosso vetor gradiente.</p>
+<p>No caso o gradiente de <span class="math"><script type="math/tex">x_5</script></span> é <span class="math"><script type="math/tex">-\frac{1}{2}</script></span>. Logo aumentar <span class="math"><script type="math/tex">x_5</script></span> irá diminuir o objetivo.
+Não é o que queremos já que buscamos o “<span class="math"><script type="math/tex">\max</script></span>” e não o “<span class="math"><script type="math/tex">\min</script></span>”.</p>
+<p>Logo aquela troca que sugeri anteriormente não foi uma boa escolha.</p>
+<p>Vamos então tentar trocar <span class="math"><script type="math/tex">x_3</script></span> com uma das variáveis básicas?</p>
+<p>Na última linha:</p>
+<p><span class="math"><script type="math/tex">x_2 = 3 - \frac{1}{2} x_5 + \frac{3}{2} x_3</script></span></p>
+<p>A troca é inviável pois o coeficiente de <span class="math"><script type="math/tex">x_3</script></span> é positivo.</p>
+<p>Restam então duas possibilidades de troca:</p>
+<p><span class="math"><script type="math/tex">x_1 = 4 - x_3\\
+ x_4 = 6 + x_5 - 3 x_3</script></span></p>
+<p>Com isso chegamos ao (pen-)último ponto importante do simplex.</p>
+<p>Atualmente <span class="math"><script type="math/tex">x_3</script></span> tem o valor <span class="math"><script type="math/tex">0</script></span>.<br>
+Se eu troca-lo com <span class="math"><script type="math/tex">x_1</script></span>:</p>
+<p><span class="math"><script type="math/tex">x_3 = 4 - x_1</script></span></p>
+<p>Ele assumirá o valor <span class="math"><script type="math/tex">4</script></span>.
+Se eu troca-lo com <span class="math"><script type="math/tex">x_4</script></span>:</p>
+<p><span class="math"><script type="math/tex">x_3 = \frac{6}{3} + \frac{1}{3} x_5 - \frac{1}{3} x_4\\
+ x_3 =  2  + \frac{1}{3} x_5 - \frac{1}{3} x_4</script></span></p>
+<p>Ele assumirá o valor <span class="math"><script type="math/tex">2</script></span>.</p>
+<p>Necessariamente teremos de escolher o valor menor.<br>
+Porque se escolhermos o valor <span class="math"><script type="math/tex">4</script></span>.<br>
+O próximo passo é substituir o valor <span class="math"><script type="math/tex">x_3 = 4 - x_1</script></span> em</p>
+<p><span class="math"><script type="math/tex">x_4 = 6 + x_5 - 3 x_3</script></span><br>
+e<br>
+<span class="math"><script type="math/tex">x_2 = 3 - \frac{1}{2} x_5 + \frac{3}{2} x_3</script></span></p>
+<p>Em <span class="math"><script type="math/tex">x_2 = ...</script></span> não haverá problema pois <span class="math"><script type="math/tex">x_2</script></span> vai ser igual <span class="math"><script type="math/tex">3 +</script></span> o valor de <span class="math"><script type="math/tex">x_3</script></span> que é <span class="math"><script type="math/tex">4</script></span>.<br>
+Então ainda é positivo.</p>
+<p>Agora em <span class="math"><script type="math/tex">x_4</script></span> haverá problema vejam:</p>
+<p><span class="math"><script type="math/tex">x_4 = 6 + x_5 - 3 (4 - x_1)\\
+ x_4 =  6 + x_5 - 12 + 3 x_1\\
+ x_4 = -6 + x_5 + 3 x_1</script></span></p>
+<p>E ops, agora <span class="math"><script type="math/tex">x_4</script></span> ficou com o valor negativo.<br>
+O máximo que <span class="math"><script type="math/tex">x_3</script></span> podia aumentar sem tornar <span class="math"><script type="math/tex">x_4</script></span> negativo era <span class="math"><script type="math/tex">2</script></span>.<br>
+E é por isso que devemos sempre escolher a transição que vai aumentar menos o valor da variável não básica.</p>
+<p>Esse teste é chamado de <strong>teste da razão</strong>.</p>
+<p>Vamos por fim, fazer a última troca. Que já sabemos ser a única das possíveis
+que não infringe nenhuma restrição e otimiza o objetivo “<span class="math"><script type="math/tex">\max 3 x_1 + 5 x_2</script></span>”:</p>
+<p><span class="math"><script type="math/tex">x_4 = 6 + x_5 - 3 x_3</script></span></p>
+<p>vira:</p>
+<p><span class="math"><script type="math/tex">x_3 = 2 + \frac{1}{3} x_5 - \frac{1}{3} x_4</script></span></p>
+<p>Substituindo o valor nas demais restrições e no objetivo teremos:</p>
+<p><span class="math"><script type="math/tex">\max 28 - \frac{1}{4} x_5 - \frac{1}{6} x_4\\
+\\
+ x_1 = 2 - \frac{1}{2} x_5 + \frac{1}{3} x_4\\
+ x_3 = 2 + \frac{1}{2} x_5 - \frac{1}{3} x_4\\
+ x_2 = 6 + \frac{1}{2} x_5 - \frac{1}{2} x_3\\
+\\
+ x_1,x_2,x_3 \ge 0\\
+ x_4,x_5     = 0</script></span></p>
+<p>E pronto! Temos a solução do nosso problema!</p>
+<p>Como eu sei que isso é a solução?</p>
+<p>Eis a última coisa importante sobre o simplex:</p>
+<p>O atestado de otimalidade é conseguido quando todas as variáveis do objetivo
+são negativas, no caso da maximização, ou positivas, no caso da minimização.</p>
+<p>O motivo disso é que se eu avaliar meu vetor gradiente: <span class="math"><script type="math/tex">(-\frac{1}{4}, -\frac{1}{6})</script></span></p>
+<p>Fica fácil de ver que não há nenhuma troca que iria otimizar mais meu objetivo.<br>
+Ambas as possibilidades: <span class="math"><script type="math/tex">x_5</script></span> e <span class="math"><script type="math/tex">x_4</script></span> se deixarem de ter o valor <span class="math"><script type="math/tex">0</script></span> iriam contribuir negativamente
+para a nossa solução.</p>
+<p>Portanto o problema já está totalmente resolvido.</p>
+<blockquote>
+<p>Durante uma prova, lembre-se de não terminar o algoritmo enquanto não obtiver o atestado de otimalidade.<br>
+Não basta voce ter certeza de que encontrou a solução ótima, sem o atestado voce pode perder pontos.</p>
+</blockquote>
+<hr>
+<p>Matricialmente falando a cada troca de variáveis que fazemos
+nós precisamos de calcular aquela inversa de <span class="math"><script type="math/tex">B^{-1}</script></span> que falei anteriormente.</p>
+<p>Assim nossa matriz de restrições fica:</p>
+<p><span class="math"><script type="math/tex">x_b = B^{-1} b - B^{-1} N x_n</script></span></p>
+<blockquote>
+<p>Já falei disso antes</p>
+</blockquote>
+<p>E substituindo <span class="math"><script type="math/tex">x_b</script></span> em nosso objetivo temos:</p>
+<p><span class="math"><script type="math/tex">\max c_b^T x_b                 + c_n^T x_n</script></span></p>
+<p><span class="math"><script type="math/tex">\max c_b^T (B^{-1} b - B^{-1} N x_n) + c_n^T x_n</script></span></p>
+<p><span class="math"><script type="math/tex">\max c_b^T B^{-1} b + c_b^T B^{-1} N x_n + c_n^T x_n</script></span></p>
+<p>Por fim:</p>
+<p><span class="math"><script type="math/tex">\max (c_b^T B^{-1} b) + (c_n^T - c_b^T B^{-1} N) x_n</script></span></p>
+<p>Onde o primeiro parentesis é o custo otimizado do nosso problema.</p>
+<blockquote>
+<p>Chamado também de custo reduzido.</p>
+</blockquote>
+<p>E o segundo parentesis é o nosso vetor gradiente, que multiplicado por
+<span class="math"><script type="math/tex">x_n</script></span> nos dá nossa direção para otimizarmos.</p>
+<p>Nenhuma grande novidade =], re-escrevendo tudo temos:</p>
+<p><span class="math"><script type="math/tex">max (c_b^T B^{-1} b) + (cn^T - cb^T B^{-1} N) x_n\\
+\\
+ x_b = B^{-1} b - B^{-1} N x_n\\
+\\
+ x_b \ge 0, x_n = 0</script></span></p>
+<p>E isso é uma iteração do método simplex escrito em forma matricial =].</p>
+<p>Vamos acabar usando analogias desse tipo no futuro, então é uma boa entender isso.</p>
+<hr>
+<p>Resumindo os passos acima:</p>
+<ul>
+<li>
+<p>Método Simplex:</p>
+</li>
+<li>
+<p>Preparo inicial:</p>
+<ul>
+<li>
+<p>Primeiro escreva o problema no formato padrão, onde não existem apenas
+restrições de igualdade, e de não negatividade.</p>
+</li>
+<li>
+<p>Segundo, escolha um conjunto de variáveis básicas e isole-os do jeito que
+fizemos acima, substituindo todas as aparições delas pelo valor delas em
+função das não-básicas.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Dessa forma fica fácil enchergar o problema.</p>
+<hr>
+<p>Agora vamos fazer as iterações do método, ou seja as trocas:</p>
+<ol>
+<li>No objetivo que deve estar no formato: &quot;<span class="math"><script type="math/tex">constante + c_1 x_1 + c_2 x_2 + ... + c_n x_n</script></span>&quot;<br>
+Encontre variáveis cujo incremento beneficiará seu objetivo.<br>
+Ou seja, se seu problema é de maximização procure pelos coeficientes positivos.<br>
+se seu problema é de minimização procure pelos coeficientes negativos.</li>
+</ol>
+<blockquote>
+<p>Pode haver mais de uma opção, mas vamos falar disso em outra aula.</p>
+</blockquote>
+<ol start="2">
+<li>
+<p>Após escolher qual variavel não-básica trocar, olhe nas restrições
+quais restrições aceitam a troca sem criar uma variável negativa.
+(se voce escolheu a variável não básica <span class="math"><script type="math/tex">x_2</script></span> procure descartar
+as restrições onde o coeficiente de <span class="math"><script type="math/tex">x_2</script></span> for negativo ou <span class="math"><script type="math/tex">0</script></span>
+pois nestas voce ou não consegue fazer a troca ou a troca
+tornaria <span class="math"><script type="math/tex">x_2</script></span> negativo)</p>
+</li>
+<li>
+<p>Das restrições que sobraram verifique qual seria o valor final da variável trocada.
+E escolha a troca que aumentar menos o valor da variável.
+Lembrando que ela vale 0 antes da troca.</p>
+</li>
+<li>
+<p>Re-escreva a equação em questão. Substitua os valores dela nas demais equações e fim da iteração =].</p>
+</li>
+<li>
+<p>Se todos os coeficientes do objetivo forem negativos/positivos (no caso da maximização e da minimização respectivamente)
+O método está encerrado e temos um atestado de otimalidade pronto =].</p>
+</li>
+</ol>
+<hr>
+<blockquote>
+<p>Daqui pra baixo não passei nada a limpo.</p>
+</blockquote>
+<p>Agora vamos fazer um exemplo:</p>
+<span class="math"><script type="math/tex; mode=display"> \max 5x_1 + 4x_2 + 3x_3\\
+ 2x_1 + 3x_2 +  x_3 = 5  -x_4\\
+ 4x_1 +  x_2 + 2x_3 = 11 -x_5\\
+ 3x_1 + 4x_2 + 2x_3 = 8  -x_6
+</script></span>
+<hr>
+<span class="math"><script type="math/tex; mode=display"> \max 5x_1 + 4x_2 + 3x_3\\
+ \\
+ x_4 = 5 -2x_1 -3x_2 -x_3\\
+ x_5 = 11 - 4x_1 -x_2 -2x_3\\
+ x_6 = 8 - 3x_1 - 4x_2 - 2x_3\\
+ \\
+ x_1 = x_2 = x_3 = 0
+</script></span>
+<hr>
+<p><span class="math"><script type="math/tex">\max \left( {\begin{array}{*{20}{c}}
+5&4&3
+\end{array}} \right)\left( {\begin{array}{*{20}{c}}
+{{x_1}}\\
+{{x_2}}\\
+{{x_3}}
+\end{array}} \right)</script></span>
+…</p>
+<p><span class="math"><script type="math/tex">x_1 = x_2 = x_3 = 0</script></span></p>
+<p>1° iteração:</p>
+<ol>
+<li>
+<p>entrar base <span class="math"><script type="math/tex">x_1</script></span> (<span class="math"><script type="math/tex">x_1</script></span> cresce)</p>
+</li>
+<li>
+<p><span class="math"><script type="math/tex">k = 1 (x_4) (B^{-1} A_1)1 = 2</script></span></p>
+</li>
+</ol>
+<blockquote>
+<p>Consertar</p>
+</blockquote>
+<blockquote>
+<p>nota pessoal: k* é o indice da linha mais restritiva (a primeira restrição que é infringida ao se caminhar por uma determinada linha do plano)</p>
+</blockquote>
+<ol start="3">
+<li>
+<p>(final) implementar a troca de base.
+nova base: <span class="math"><script type="math/tex">{x_1, x_5, x_6}</script></span> v. básicas.</p>
+<p><span class="math"><script type="math/tex">\begin{array}{l}
+B = \left[ {\begin{array}{*{20}{c}}
+2&0&0\\
+4&1&0\\
+3&0&1
+\end{array}} \right]\\
+N = \left[ {\begin{array}{*{20}{c}}
+1&3&1\\
+0&1&2\\
+0&4&2
+\end{array}} \right]\\
+\\
+{c_b} = \left( {\begin{array}{*{20}{c}}
+5&0&0
+\end{array}} \right)\\
+{c_n} = \left( {\begin{array}{*{20}{c}}
+0&4&3
+\end{array}} \right)
+\end{array}</script></span></p>
+</li>
+</ol>
+<p>Agora re-escreve-se a variável que saiu (no caso <span class="math"><script type="math/tex">x_1</script></span>) em termo das não básicas.</p>
+<p>re-escrevendo temos:</p>
+<p><span class="math"><script type="math/tex">x_1 = \frac{5}{2} - \frac{1}{2} x_4 - \frac{3}{2} x_2 - \frac{1}{2} x_3\\
+ x_2 =  1  -  2  x_4 -  5  x_2 -  0  x_3\\
+ x_6 = \frac{1}{2} + \frac{3}{2} x_4 + \frac{1}{2} x_2 - \frac{1}{2} x_3</script></span></p>
+<blockquote>
+<p>E essa é nossa nova matriz.</p>
+</blockquote>
+<p>Nosso novo max:</p>
+<p><span class="math"><script type="math/tex">\max \frac{25}{2} - \frac{5}{2} x_4 - \frac{7}{2} x_2 + \frac{1}{2} x_3\\
+\\
+   x_1 = \frac{5}{2} - \frac{1}{2} x_4 - \frac{3}{2} x_2 - \frac{1}{2} x_3\\
+   x_5 =  1  +  2  x_4 +  5  x_2 +  0  x_3\\
+   x_6 = \frac{1}{2} + \frac{3}{2} x_4 + \frac{1}{2} x_2 - \frac{1}{2} x_3</script></span></p>
+<blockquote>
+<p>Nesse ponto podemos estar no ótimo, mas não temos certeza se estamos.<br>
+Precisamos de mais um passo para conseguirmos o atestado de otimalidade.<br>
+Condição para atestado: todos os coeficientes do objetivo negativos.<br>
+Enquanto não obtiver isso vai caminhando, se não der para caminhar, finja que caminhou só para trocar as variáveis.<br>
+Com isso deve ser possível re-escrever o objetivo de forma que todos os coeficientes dele sejam não positivos.</p>
+</blockquote>
+<blockquote>
+<p>No pior dos casos voce entra em loop infinito, e nunca consegue um objetivo de coeficientes não positivos.<br>
+É provado que isso só ocorrerá se no teste da razão, houverem dois caminhos possíveis e voce escolher o caminho de menor   indice.<br>
+Tenho que entender isso melhor mas é mais ou menos isso: Temos a linha 1 e 3 e elas são igualmente desejáveis pelo teste   da razão.<br>
+Se eu escolher a 3 pode acontecer loop. Se eu escolher 1 garanto que não havera loop.<br>
+Não! se garantirmos sempre o de menor índice não haverá loop. O que pode acontecer é de irmos voltarmos se escolhermos os índices aleatoriamente.</p>
+</blockquote>
+<p>última iteração (espero):</p>
+<p>entra na base <span class="math"><script type="math/tex">x_3</script></span> e saí <span class="math"><script type="math/tex">x_6</script></span>:</p>
+<p><span class="math"><script type="math/tex">\max  13 - x_4 - 4 x_2 - x_6\\
+\\
+ x_1 = 2 - 2 x_4 - 2 x_2 + x_6\\
+ x_5 = 1 + 2 x_4 + 5 x_2\\
+ x_3 = 1 + 3 x_4 +   x_2 - 2 x_6</script></span></p>
+<p>Agora finalmente, note que todos os coeficientes da função objetivo no dicionário acima são negativos!<br>
+E isso é o atestado de otimálidade, significa que para qualquer lado que caminhemos só iremos piorar o caso ótimo.</p>
+<ol>
+<li>admite solução ótima multipla?<br>
+Não. há que tem <span class="math"><script type="math/tex">c_j = 0</script></span> na base ótima (cond necessária)</li>
+</ol>
+<p><span class="math"><script type="math/tex">\max 10 - 2 x_1 + 0 x_3\
+\\
+ x_4 = 5 - 1 x_1\\
+ x_2 = 0 + 0 x_1 - x_3</script></span></p>
+<blockquote>
+<p>Dúvida nesse ponto: O que é um vertice dejenerado?<br>
+O prof. disse que se ele não for degenerado a condição acima é necessária e suficente e não apenas necessária.</p>
+</blockquote>
+<blockquote>
+<p>Frase que ouvi meio solta: Na ausencia de degeneração ele não cicla.<br>
+Degeneração é um numero excessivo de restrições justas em um mesmo ponto.<br>
+ou seja, um mesmo ponto ótimo pode ser expresso pela intercessões de mais de duas restrições.</p>
+</blockquote></body>
+</html>
